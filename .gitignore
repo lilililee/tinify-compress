@@ -1,0 +1,9 @@
+node_modules
+dist/js
+dist/*.js
+dist/*.map
+*.log
+.cache
+*.zip
+build
+

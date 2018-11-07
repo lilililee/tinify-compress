@@ -1,6 +1,6 @@
 {
   "name": "tinify-compress",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Tinify-compress is a plugin that using tinypng api to compress pictures( jpg or png ).",
   "main": "index.js",
   "scripts": {

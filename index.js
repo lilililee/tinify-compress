@@ -6,6 +6,8 @@ const colors = require('colors')
 const argv = require('minimist')(process.argv.slice(2))
 const util = require('./lib/util')
 
+console.log('tinify-compress start')
+
 // 1. 检测参数， 不符合则会退出程序
 // 校验参数传递
 function tinypng() {
@@ -65,18 +67,19 @@ function tinypng() {
               let endSize = util.getFileSize(distFile)
               endTotalSize += endSize
               let percent = (((startSize - endSize) / startSize) * 100).toFixed(0)
-              task.title = `${item.padEnd(50)} [ ${(startSize + 'KB').padEnd(8)} => ${(endSize + 'KB').padEnd(
-                8
-              )}  -${percent}% ] `
+              task.title = `${item.padEnd(50)} [ ${(startSize.toFixed(1) + 'KB').padEnd(8)} => ${(
+                endSize.toFixed(1) + 'KB'
+              ).padEnd(8)}  -${percent}% ] `
               count++
-              
+
               if (count >= imageList.length) {
                 setTimeout(e => {
-                  let savedSize = (startTotalSize - endTotalSize).toFixed(2)
-                  let savedPercent = (((startTotalSize - endTotalSize) / startTotalSize) * 100).toFixed(0)
+                  let savedSize = startTotalSize - endTotalSize
+                  let savedPercent = ((startTotalSize - endTotalSize) / startTotalSize) * 100
                   console.log(
-                    `complete!  [ totalSize: ${startTotalSize}KB, resultSize: ${endTotalSize}KB, savedSize: ${savedSize}KB, savedPercent: ${savedPercent}% ]`
-                      .green
+                    `complete!  [ totalSize: ${startTotalSize.toFixed(1)}KB, resultSize: ${endTotalSize.toFixed(
+                      1
+                    )}KB, savedSize: ${savedSize.toFixed(1)}KB, savedPercent: ${savedPercent.toFixed(0)}% ]`.green
                   )
                 })
               }
