@@ -1,0 +1,30 @@
+{
+  "name": "tinify-compress",
+  "version": "1.0.9",
+  "description": "Tinify-compress is a plugin that using tinypng api to compress pictures( jpg or png ).",
+  "main": "index.js",
+  "scripts": {
+    "example": "node ./example/index.js --s ./example/images --d ./example/images/dist --key H1rGzjrwTW7m47JpMT7597qkf6bZgNnJ",
+    "example2": "node ./example/index.js --s ./example/images --key H1rGzjrwTW7m47JpMT7597qkf6bZgNnJ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lilililee/tinify-compress/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilililee/tinify-compress"
+  },
+  "keywords": ["tinypng", "image", "compress"],
+  "author": "liguang466066",
+  "license": "MIT",
+  "bin": {
+    "tinify-compress": "./bin/tinify-compress"
+  },
+  "dependencies": {
+    "colors": "^1.3.2",
+    "listr": "^0.14.2",
+    "minimist": "^1.2.0",
+    "tinify": "^1.6.0-beta.2"
+  }
+}

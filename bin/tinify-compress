@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+const tinypng = require('../index.js')
+
+console.log('tinify-compress start')
+
+tinypng()
