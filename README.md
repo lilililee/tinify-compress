@@ -1,4 +1,4 @@
-#Tinify-compress
+# Tinify-compress
 
 Tinify-compress is a plugin that using tinypng api to compress pictures( jpg or png ).
 
